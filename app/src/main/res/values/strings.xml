@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Planetary Systems</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="earth">Earth</string>
+    <string name="milkyway_galaxy">Milky-Way Galaxy</string>
+
+</resources>
