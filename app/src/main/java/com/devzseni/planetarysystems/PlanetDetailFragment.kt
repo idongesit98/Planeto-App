@@ -6,16 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.devzseni.planetarysystems.adapter.PlanetAdapter
 import com.devzseni.planetarysystems.databinding.FragmentPlanetDetailBinding
 
 class PlanetDetailFragment : Fragment() {
     lateinit var binding: FragmentPlanetDetailBinding
     private val args by navArgs<PlanetDetailFragmentArgs>()
-    //private lateinit var obj: PlanetData
-    private var planetImg:Int? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +29,7 @@ class PlanetDetailFragment : Fragment() {
         binding.galaxyInfo.text = planetDetails.galaxy
         binding.gravityInfo.text = planetDetails.gravity
         binding.overviewInfo.text = planetDetails.overView
-        binding.planetImgInfo.setImageResource(planetImg!!)
+       // binding.planetImgInfo.setImageResource(planetImg!!)
         return binding.root
     }
 

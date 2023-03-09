@@ -1,21 +1,17 @@
 package com.devzseni.planetarysystems.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.devzseni.planetarysystems.PlanetData
-import com.devzseni.planetarysystems.PlanetDetailFragment
 import com.devzseni.planetarysystems.R
 import com.devzseni.planetarysystems.databinding.ViewPlanetBinding
-import com.devzseni.planetarysystems.fragments.RvFragment
 import com.devzseni.planetarysystems.fragments.RvFragmentDirections
 
 class PlanetAdapter(
     var planet:List<PlanetData>
-):
-    RecyclerView.Adapter<PlanetAdapter.PlanetViewHolder>(){
+): RecyclerView.Adapter<PlanetAdapter.PlanetViewHolder>(){
 
     inner class PlanetViewHolder(val binding: ViewPlanetBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -26,7 +22,7 @@ class PlanetAdapter(
         )
     }
     override fun onBindViewHolder(holder: PlanetViewHolder, position: Int) {
-        var dummyImage:Int  = 0
+        var dummyImage = 0
         holder.itemView.setOnClickListener {
             val action = RvFragmentDirections.actionRvFragmentToPlanetDetailFragment(planet[position])
             it.findNavController().navigate(action)
